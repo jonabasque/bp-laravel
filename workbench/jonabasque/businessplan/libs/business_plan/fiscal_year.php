@@ -112,7 +112,7 @@ class FiscalYear {
 
     extract($var_array);
 
-    echo "$concept, $importe, $units, $wddx_tamaño\n";
+    echo "$concept, $importe, $units\n";
 
   	$opcion=substr($code,0,1);
 

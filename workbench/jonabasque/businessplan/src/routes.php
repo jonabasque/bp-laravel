@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('businessplan',function(){
 
-Route::get('home', 'HomeController@index');
+	//Return the view index of businessplan package
+	return View::make('Jonabasque/Businessplan::index_example');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+});
 
 

@@ -18,7 +18,17 @@ class BusinessplanServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('jonabasque/businessplan');
+		//Load views from package
+		$this->loadViewsFrom(dirname(dirname(__DIR__)).'/views', 'Jonabasque/Businessplan');
+		include __DIR__.'/../../routes.php';
+
+		include __DIR__.'/../../../libs/business_plan/movement.php';
+		include __DIR__.'/../../../libs/business_plan/inversion.php';
+		include __DIR__.'/../../../libs/business_plan/human_resource.php';
+		include __DIR__.'/../../../libs/business_plan/results.php';
+		include __DIR__.'/../../../libs/business_plan/business_plan.php';
+		include __DIR__.'/../../../libs/business_plan/fiscal_year.php';
+
 	}
 
 	/**
