@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use \asketic\business_plan\BusinessPlan as BusinessPlan;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,6 +32,19 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+
+		$locale=["Inglés","EEUU"];
+
+		$planDeNegocio = new Businessplan("Alimentacion",$locale,"Ekodenda");
+
+		var_dump($planDeNegocio);
+
+		echo "<br><br>";
+
+		$planDeNegocioSerialize = serialize($planDeNegocio);
+
+		var_dump($planDeNegocioSerialize);
+
 		return view('welcome');
 	}
 

@@ -20,14 +20,18 @@ class BusinessplanServiceProvider extends ServiceProvider {
 	{
 		//Load views from package
 		$this->loadViewsFrom(dirname(dirname(__DIR__)).'/views', 'Jonabasque/Businessplan');
-		include __DIR__.'/../../routes.php';
+		require_once __DIR__.'/../../routes.php';
 
-		include __DIR__.'/../../../libs/business_plan/movement.php';
-		include __DIR__.'/../../../libs/business_plan/inversion.php';
-		include __DIR__.'/../../../libs/business_plan/human_resource.php';
-		include __DIR__.'/../../../libs/business_plan/results.php';
-		include __DIR__.'/../../../libs/business_plan/business_plan.php';
-		include __DIR__.'/../../../libs/business_plan/fiscal_year.php';
+		require_once __DIR__.'/../../../libs/business_plan/movement.php';
+		require_once __DIR__.'/../../../libs/business_plan/inversion.php';
+		require_once __DIR__.'/../../../libs/business_plan/human_resource.php';
+		require_once __DIR__.'/../../../libs/business_plan/results.php';
+		require_once __DIR__.'/../../../libs/business_plan/business_plan.php';
+		require_once __DIR__.'/../../../libs/business_plan/fiscal_year.php';
+
+		$this->publishes([
+    	__DIR__.'/../../../public/assets/' => public_path('assets/jonabasque/businessplan'),
+		], 'public');
 
 	}
 

@@ -6,14 +6,14 @@
 		<meta charset="UTF-8">
 		<title>Business Plan</title>
 		<!--<link rel="stylesheet" type="text/css" href="{!! HTML::style('css/style.css') !!}" />-->
-		<LINK rel="stylesheet" type="text/css" href="../../public/css/app.css" />
+		<link href="{{ asset('assets/jonabasque/businessplan/css/style.css') }}" rel="stylesheet" media="screen">
 
 	</head>
 
 	<body>
 
 			<header >
-				<img src="public/images/logo.png" />
+				<img src="{{ asset('assets/jonabasque/businessplan/images/logo.png') }}" />
 				<h2>Business Plan</h2>
 
 				<bp-nav-ejercicios></bp-nav-ejercicios>

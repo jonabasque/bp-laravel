@@ -14,7 +14,7 @@
 Route::get('businessplan',function(){
 
 	//Return the view index of businessplan package
-	return View::make('Jonabasque/Businessplan::index_example');
+	return View::make('Jonabasque/Businessplan::index');
 
 });
 
